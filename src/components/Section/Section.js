@@ -5,7 +5,6 @@ class Section extends React.Component {
     title: 'Please leave feedback',
   };
   render() {
-    console.log(this.children);
     return (
       <section>
         <h2>{this.state.title}</h2>
