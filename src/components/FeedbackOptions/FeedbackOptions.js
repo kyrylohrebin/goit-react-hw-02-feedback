@@ -1,20 +1,22 @@
 import React from 'react';
 
-const FeedbackBtn = ({ feedback, addFeedback }) => {
+const FeedbackBtn = ({ feedback, onLeaveFeedback }) => {
   return (
     <button
       key={feedback}
       type="button"
       data-feedback={feedback}
-      onClick={addFeedback}
+      onClick={onLeaveFeedback}
     >
       {feedback}
     </button>
   );
 };
 
-const FeedbackOptions = ({ options, addFeedback }) => {
-  return options.map(option => FeedbackBtn({ feedback: option, addFeedback }));
+const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+  return options.map(option =>
+    FeedbackBtn({ feedback: option, onLeaveFeedback }),
+  );
 };
 
 export default FeedbackOptions;
